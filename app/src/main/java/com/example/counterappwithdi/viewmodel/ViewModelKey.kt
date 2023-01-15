@@ -9,3 +9,5 @@ import kotlin.reflect.KClass
     AnnotationTarget.PROPERTY_SETTER)
 @MapKey
 annotation class ViewModelKey(val value: KClass<out ViewModel>)
+
+// we will use daggers Map as Collection and here we are creating the key for the map
