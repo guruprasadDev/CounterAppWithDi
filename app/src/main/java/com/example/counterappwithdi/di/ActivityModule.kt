@@ -2,8 +2,10 @@ package com.example.counterappwithdi.di
 
 import com.example.counterappwithdi.MainActivity
 import dagger.Module
+import dagger.android.ContributesAndroidInjector
 
 @Module
-class ActivityModule {
-    fun provideMainActivity(activity: MainActivity):MainActivity{return activity}
+abstract class ActivityModule {
+    @ContributesAndroidInjector
+    abstract fun contributeMainActivity(): MainActivity
 }
